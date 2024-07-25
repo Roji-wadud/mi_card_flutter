@@ -31,7 +31,72 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
-        body: Container(),
+        body: Padding(
+          padding: const EdgeInsets.all(0),
+          child: SafeArea(
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: 50.0,
+                  backgroundColor: Colors.red,
+                  backgroundImage: AssetImage('images/IMG.jpg'),
+                ),
+                Text(
+                  'Roji Wadud',
+                  style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontSize: 40.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  'FLUTTER DEVELOPER',
+                  style: TextStyle(
+                    fontFamily: 'SourceSans3',
+                    fontSize: 20.0,
+                    color: Colors.teal[100],
+                    letterSpacing: 2.5,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Card(
+                    margin:
+                        EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.phone,
+                        color: Colors.teal,
+                      ),
+                      title: Text(
+                        '+234 703 1933 051',
+                        style: TextStyle(
+                          fontFamily: 'SourceSans3',
+                          fontSize: 20.0,
+                          color: Colors.teal[900],
+                        ),
+                      ),
+                    )),
+                Card(
+                    margin:
+                        EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
+                    child: ListTile(
+                        leading: Icon(
+                          Icons.email,
+                          color: Colors.teal,
+                        ),
+                        title: Text(
+                          'himansales6@gmail.com',
+                          style: TextStyle(
+                            fontFamily: 'SourceSans3',
+                            fontSize: 20.0,
+                            color: Colors.teal[900],
+                          ),
+                        )))
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
